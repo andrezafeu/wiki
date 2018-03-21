@@ -34,3 +34,14 @@ get "/:title" do
   @content = page_content(@title)
   erb :show
 end
+
+get "/:title/edit" do
+  @title = params[:title]
+  @content = page_content(@title)
+  erb :edit
+end
+
+put "/:title" do
+  save_content(params[:title], params[:content])
+  redirect "/#{params[:title]}"
+end

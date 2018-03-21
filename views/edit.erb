@@ -1,0 +1,13 @@
+<h1>Edit page: <%= @title %></h1>
+<!-- there's no put method for html forms, so we have to use post -->
+<form method="post" action="/<%= @title %>">
+  <!-- but since sinatra supports put method, that's how it's defined -->
+  <input type="hidden" name="_method" value="put">
+  <fieldset>
+    <label for="content">Content</label>
+    <textarea rows="10" columns="50" name="content" id="content"><%= @content %></textarea>
+  </fieldset>
+  <input type="submit">
+</form>
+
+<a href="/">Back to Index</a>
