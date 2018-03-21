@@ -1,0 +1,16 @@
+<h1>Add a new page</h1>
+<form method="post" action="/create">
+  <fieldset>
+    <label for="title">Title:</label>
+    <!-- The id attribute needs to match the for attribute in the preceeding label -->
+    <input type="text" name="title" id="title">
+  </fieldset>
+  <fieldset>
+    <label for="content">Content</label>
+    <!-- The name attribute is used as the name of the parameter when the form is submitted -->
+    <textarea rows="10" columns="50" name="content" id="content"></textarea>
+  </fieldset>
+  <input type="submit">
+</form>
+
+<a href="/">Back to Index</a>
