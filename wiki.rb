@@ -23,6 +23,7 @@ get "/" do
 end
 
 get "/new" do
+  # if we had different layouts for the app, we would specify it as erb :new, layout: :layout_name.erb
   erb :new
 end
 
