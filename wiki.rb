@@ -1,5 +1,9 @@
 require "sinatra"
 
+def h(string)
+  Rack::Utils.escape_html(string)
+end
+
 def page_content(title)
   File.read("pages/#{title}.txt")
 # if the file is not found, raise exception
